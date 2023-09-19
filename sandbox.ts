@@ -1,7 +1,21 @@
-const character = 'mario'
+let character = 'mario'
+let age = 20
+let isBlackbelt = false
 
-console.log(character)
 
-const inputs = document.querySelectorAll("input")
+// character = 20 // error bcox it string type
+character = 'luigi'
 
-inputs.forEach(input => console.log(input))
+
+//age = 'sasd' // error for same reasone
+age = 40
+
+
+// same goes for isBackbelt
+
+
+const circ = (diameter:number):number =>{
+    return diameter * Math.PI;
+}
+
+console.log(circ(7.5))

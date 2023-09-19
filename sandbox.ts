@@ -1,43 +1,49 @@
-// array
-let names = ["sam", "sumit", "rahul"];
+// explicit types
 
-names.push("tosad");
-// names.push(3) // error bcos array is only stirng
-// names[0] = 3 //error
+let Character: string;
+let age: number;
+let isLoggedIn: boolean;
 
-let numbers = [10, 12, 213];
+// age = '234' // error type error
+age = 30;
 
-numbers.push(23);
-// numbers.push('sag')// error for same
-// numbers[0] = 'asdffs'
+// isLoggedIn = 23' // error type error
+isLoggedIn = true;
 
-// but we can crate mixed
-let mixed = ["sam", 20, "rahul", 234];
+// arrays
+// let ninjas:string[];
+// ninjas.push('sahsm');  // error bcus we havn't declare it yet
+// show we can do this
 
-mixed.push("samsingh");
+let ninjas: string[] = [];
+ninjas.push("sahsm");
+// ninjas= [12,2]// error
+ninjas = ["sam", "rahlu"];
+
+// union types
+// could be one or two types
+let mixed: (string | number | boolean)[] = [];
+
+mixed.push("sam");
 mixed.push(234);
-mixed[2] = "aksh";
+mixed.push(true);
+console.log(mixed);
+
+let uid: string | number; // for a variable no need paranthesis;
 
 // objects
 
-let ninjs = {
-  name: "mario",
-  belt: "black",
-  age: 30,
+// objects
+let ninjaOne: object;
+ninjaOne = { name: "yoshi", age: 30 };
+
+let ninjaTwo: {
+  name: string;
+  age: number;
+  beltColour: string;
 };
-
-ninjs.age = 40;
-ninjs.name = 'sam'
-// ninjs.age = '30'; // error same reason type change
-// ninjs.skills = ['fighting', 'sneaking'] // error
-
-
-// we can overide which only exist
-
-ninjs = {
-    name: 'yoshi',
-    belt : 'oragnge',
-    // age: '34' // error type 
-    age: 34,
-    // skills : ['sdfasdf','asdfasdfsf'] // error bcos it does n't exits in original
-}
+ninjaTwo = {
+  name: "ken",
+  age: 20,
+  beltColour: "black", //,skills:[] // will create err bcos it doesn't exits in original
+};

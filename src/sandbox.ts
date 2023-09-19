@@ -1,35 +1,28 @@
-let greet: Function;
-
-// greet = 'hell' // error
-
-greet = () => {
-  console.log("hola!");
-};
-
-// ? is for optional in parameters if get value good if not also good
-// const add = (a:number, b:number,c?:number|string) => {
-//     console.log(a + b);
-//     console.log(c) // undefined output
+// const loginDetails = (uid: string | number, item: string):void => {
+//     console.log(`${item} has a uid of ${uid}`);
 // }
-// add(5, '10') // error
-// add(5,10)
 
-// we can solve it by this method assigned default value but on ?
-// if funciton does return anything it should be void
-const add = (a: number, b: number, c: number | string = 10): void => {
-  console.log(a + b); // 15
-  console.log(c); // 10 if not provied if provided 20 or sam
-};
-// add(5, '10') // error
-add(5, 10);
-add(5, 10, 20); //
-add(5, 10, "sam");
 
-// if return should also define type to return after ():type explicit
-// or it will get autometic also
-const minus = (a: number, b: number): number => {
-  return a + b;
-};
+// const greet = (user:{name: string, uid:string | number}):void => {
+//     console.log(`${user.name} says hello`)
+// }
 
-let result = minus(10, 7);
-console.log(result);
+
+
+// above code has some repeatition string | number 
+// we can do type aliases
+// in this we can create a type 
+type StringOrNumber = string | number;
+type ObjectWithName = {name:string, uid:StringOrNumber};
+
+
+
+const loginDetails = (uid: StringOrNumber, item: string):void => {
+    console.log(`${item} has a uid of ${uid}`);
+}
+
+
+const greet = (user:ObjectWithName):void => {
+    console.log(`${user.name} says hello`)
+}
+

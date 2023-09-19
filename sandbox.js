@@ -1,12 +1,32 @@
-var character = 'mario';
-var age = 20;
-var isBlackbelt = false;
-// character = 20 // error bcox it string type
-character = 'luigi';
-//age = 'sasd' // error for same reasone
-age = 40;
-// same goes for isBackbelt
-var circ = function (diameter) {
-    return diameter * Math.PI;
+// array
+var names = ["sam", "sumit", "rahul"];
+names.push("tosad");
+// names.push(3) // error bcos array is only stirng
+// names[0] = 3 //error
+var numbers = [10, 12, 213];
+numbers.push(23);
+// numbers.push('sag')// error for same
+// numbers[0] = 'asdffs'
+// but we can crate mixed
+var mixed = ["sam", 20, "rahul", 234];
+mixed.push("samsingh");
+mixed.push(234);
+mixed[2] = "aksh";
+// objects
+var ninjs = {
+    name: "mario",
+    belt: "black",
+    age: 30,
 };
-console.log(circ(7.5));
+ninjs.age = 40;
+ninjs.name = 'sam';
+// ninjs.age = '30'; // error same reason type change
+// ninjs.skills = ['fighting', 'sneaking'] // error
+// we can overide which only exist
+ninjs = {
+    name: 'yoshi',
+    belt: 'oragnge',
+    // age: '34' // error type 
+    age: 34,
+    // skills : ['sdfasdf','asdfasdfsf'] // error bcos it does n't exits in original
+};

@@ -1,49 +1,23 @@
-// explicit types
+let age: any = 25;
 
-let Character: string;
-let age: number;
-let isLoggedIn: boolean;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'luigi' };
+console.log(age);
 
-// age = '234' // error type error
-age = 30;
+let mixed: any[] = [];
 
-// isLoggedIn = 23' // error type error
-isLoggedIn = true;
-
-// arrays
-// let ninjas:string[];
-// ninjas.push('sahsm');  // error bcus we havn't declare it yet
-// show we can do this
-
-let ninjas: string[] = [];
-ninjas.push("sahsm");
-// ninjas= [12,2]// error
-ninjas = ["sam", "rahlu"];
-
-// union types
-// could be one or two types
-let mixed: (string | number | boolean)[] = [];
-
-mixed.push("sam");
-mixed.push(234);
-mixed.push(true);
+mixed.push(5);
+mixed.push('mario');
+mixed.push(false);
 console.log(mixed);
 
-let uid: string | number; // for a variable no need paranthesis;
+let ninja: { name: any, age: any };
 
-// objects
+ninja = { name: 'yoshi', age: 25 };
+console.log(ninja);
 
-// objects
-let ninjaOne: object;
-ninjaOne = { name: "yoshi", age: 30 };
-
-let ninjaTwo: {
-  name: string;
-  age: number;
-  beltColour: string;
-};
-ninjaTwo = {
-  name: "ken",
-  age: 20,
-  beltColour: "black", //,skills:[] // will create err bcos it doesn't exits in original
-};
+ninja = { name: 25, age: 'yoshi' };
+console.log(ninja);
